@@ -1,9 +1,29 @@
 {
   "songs": [
     {
-      "url": "https://www.youtube.com/watch?v=4-jBiumYmXk",
-      "singer": "adele",
-      "title": "hello"
+      "url": "https://www.youtube.com/watch?v=tdeJiw6qMkA",
+      "singer": "dave rodgers",
+      "title": "deja vu"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=atuFSv2bLa8",
+      "singer": "manuel",
+      "title": "gas gas gas"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=X-cfWM0BC_4",
+      "singer": "S3RL",
+      "title": "Rick Hentai"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "singer": "rick astley",
+      "title": "Never Gonna Give You Up"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=hH9M-m3WD0g",
+      "singer": "Piano Fantasia",
+      "title": "Song for Denise"
     },
     {
       "url": "https://www.youtube.com/watch?v=hLQl3WQQoQ0",
