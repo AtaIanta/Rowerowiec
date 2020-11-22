@@ -11,7 +11,7 @@ module.exports = class MusicTriviaCommand extends Command {
       memberName: 'music-trivia',
       aliases: ['music-quiz', 'start-quiz', 'mtrivia'],
       group: 'music',
-      description: 'Engage in a music quiz with your friends!',
+      description: 'Stocz muzyczną bitwę ze swoimi kolegami!',
       guildOnly: true,
       clientPermissions: ['SPEAK', 'CONNECT'],
       throttling: {
@@ -21,11 +21,11 @@ module.exports = class MusicTriviaCommand extends Command {
       args: [
         {
           key: 'numberOfSongs',
-          prompt: 'What is the number of songs you want the quiz to have?',
+          prompt: 'Ile piosenek chcesz zgadywać?',
           type: 'integer',
           min: 1,
           //default: 5,
-          max: 15
+          max: 100
         }
       ]
     });
@@ -35,10 +35,10 @@ module.exports = class MusicTriviaCommand extends Command {
     var voiceChannel = message.member.voice.channel;
     if (!voiceChannel)
       return message.say(
-        ':no_entry: Please join a voice channel and try again!'
+        ':no_entry: Dołącz najpierw do kanału głosowego!'
       );
     if (message.guild.musicData.isPlaying === true)
-      return message.channel.send(':x: A quiz or a song is already running!');
+      return message.channel.send(':x: Quiz już się odbywa!');
     message.guild.musicData.isPlaying = true;
     message.guild.triviaData.isTriviaRunning = true;
     // fetch link array from txt file
@@ -55,10 +55,10 @@ module.exports = class MusicTriviaCommand extends Command {
     // create and send info embed
     const infoEmbed = new MessageEmbed()
       .setColor('#ff7373')
-      .setTitle(':notes: Starting Music Quiz!')
+      .setTitle(':notes: Quiz już wkrótce się zacznie!')
       .setDescription(
-        `:notes: Get ready! There are ${numberOfSongs} songs, you have 30 seconds to guess either the singer/band or the name of the song. Good luck!
-        You can end the trivia at any point by using the ${prefix}end-trivia command!`
+        `:notes: Przygotuj się! ${numberOfSongs} piosenek, 30 sekund każda, odgadnij artystę i/lub tytuł aby zdobyć punkt. Powodzenia!
+        Aby zakończyć quiz użyj ${prefix}end-trivia`
       );
     message.say(infoEmbed);
     // init quiz queue
@@ -218,7 +218,7 @@ module.exports = class MusicTriviaCommand extends Command {
 
             const embed = new MessageEmbed()
               .setColor('#ff7373')
-              .setTitle(`:musical_note: The song was:  ${song}`)
+              .setTitle(`:musical_note: Piosenka:  ${song}`)
               .setDescription(
                 classThis.getLeaderBoard(Array.from(sortedScoreMap.entries()))
               );
@@ -250,7 +250,7 @@ module.exports = class MusicTriviaCommand extends Command {
             );
             const embed = new MessageEmbed()
               .setColor('#ff7373')
-              .setTitle(`Music Quiz Results:`)
+              .setTitle(`Wyniki:`)
               .setDescription(
                 classThis.getLeaderBoard(Array.from(sortedScoreMap.entries()))
               );
