@@ -53,7 +53,7 @@ client.registry
 
 client.once('ready', () => {
   console.log(`${client.user.tag} is Ready!`);
-  client.user.setActivity(`${prefix}help`, {
+  client.user.setActivity(`swój nowy rower`, {
     type: 'WATCHING',
     url: 'https://github.com/galnir/Master-Bot'
   });
