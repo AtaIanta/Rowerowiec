@@ -71,7 +71,7 @@ module.exports = class MusicTriviaCommand extends Command {
         title: randomXVideoLinks[i].title,
         voiceChannel
       };
-      console.log(song);
+      console.log('${song}');
       message.guild.triviaData.triviaQueue.push(song);
     }
     const channelInfo = Array.from(
