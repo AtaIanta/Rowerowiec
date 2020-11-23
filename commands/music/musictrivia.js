@@ -95,6 +95,7 @@ module.exports = class MusicTriviaCommand extends Command {
             quality: 'highestaudio',
             highWaterMark: 1024 * 1024 * 1024
           })
+          console.log('{$song}')
         )
         .on('start', function() {
           message.guild.musicData.songDispatcher = dispatcher;
@@ -124,7 +125,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react('☑');
+                msg.react(':rRowerowiec:');
                 return collector.stop();
               }
               message.guild.triviaData.triviaScore.set(
@@ -132,7 +133,7 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   1
               );
-              msg.react('☑');
+              msg.react(':rRowerowiec:');
             }
             // if user guessed singer
             else if (
@@ -147,7 +148,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react('☑');
+                msg.react(':rRowerowiec:');
                 return collector.stop();
               }
 
@@ -156,7 +157,7 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   1
               );
-              msg.react('☑');
+              msg.react(':rRowerowiec:');
             } else if (
               msg.content.toLowerCase() ===
                 queue[0].singer.toLowerCase() +
@@ -177,7 +178,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react('☑');
+                msg.react(':rRowerowiec:');
                 return collector.stop();
               }
               message.guild.triviaData.triviaScore.set(
@@ -185,11 +186,11 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   2
               );
-              msg.react('☑');
+              msg.react(':rRowerowiec:');
               return collector.stop();
             } else {
               // wrong answer
-              return msg.react('❌');
+              return msg.react(':martin:');
             }
           });
 
@@ -287,12 +288,12 @@ module.exports = class MusicTriviaCommand extends Command {
     if (!arr) return;
     let leaderBoard = '';
 
-    leaderBoard = `👑   **${arr[0][0]}:** ${arr[0][1]}  points`;
+    leaderBoard = `👑   **${arr[0][0]}:** ${arr[0][1]}  punkt(ów)`;
 
     if (arr.length > 1) {
       for (let i = 1; i < arr.length; i++) {
         leaderBoard =
-          leaderBoard + `\n\n   ${i + 1}: ${arr[i][0]}: ${arr[i][1]}  points`;
+          leaderBoard + `\n\n   ${i + 1}: ${arr[i][0]}: ${arr[i][1]}  punkt(ów)`;
       }
     }
     return leaderBoard;
