@@ -71,6 +71,7 @@ module.exports = class MusicTriviaCommand extends Command {
         title: randomXVideoLinks[i].title,
         voiceChannel
       };
+      console.log(song);
       message.guild.triviaData.triviaQueue.push(song);
     }
     const channelInfo = Array.from(
@@ -124,7 +125,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react(':rRowerowiec:');
+                msg.react('704644463032795187');
                 return collector.stop();
               }
               message.guild.triviaData.triviaScore.set(
@@ -132,7 +133,7 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   1
               );
-              msg.react(':rRowerowiec:');
+              msg.react('704644463032795187');
             }
             // if user guessed singer
             else if (
@@ -147,7 +148,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react(':rRowerowiec:');
+                msg.react('704644463032795187');
                 return collector.stop();
               }
 
@@ -156,7 +157,7 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   1
               );
-              msg.react(':rRowerowiec:');
+              msg.react('704644463032795187');
             } else if (
               msg.content.toLowerCase() ===
                 queue[0].singer.toLowerCase() +
@@ -177,7 +178,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react(':rRowerowiec:');
+                msg.react('704644463032795187');
                 return collector.stop();
               }
               message.guild.triviaData.triviaScore.set(
@@ -185,11 +186,11 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   2
               );
-              msg.react(':rRowerowiec:');
+              msg.react('704644463032795187');
               return collector.stop();
             } else {
               // wrong answer
-              return msg.react(':martin:');
+              return msg.react('777954594596454408');
             }
           });
 
