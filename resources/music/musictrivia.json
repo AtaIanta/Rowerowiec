@@ -1,6 +1,36 @@
 {
   "songs": [
     {
+      "url": "https://www.youtube.com/watch?v=12vh55_1ul8",
+      "singer": "basshunter",
+      "title": "dota"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Lgs9QUtWc3M",
+      "singer": "alice DJ",
+      "title": "better off alone"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=IRvGZffXhfk",
+      "singer": "ATC",
+      "title": "All Around The World"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZyhrYis509A",
+      "singer": "aqua",
+      "title": "baby girl"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=FTQbiNvZqaY",
+      "singer": "toto",
+      "title": "africa"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=tl6u2NASUzU",
+      "singer": "alphaville",
+      "title": "big in japan"
+    },
+    {
       "url": "https://www.youtube.com/watch?v=tdeJiw6qMkA",
       "singer": "dave rodgers",
       "title": "deja vu"
