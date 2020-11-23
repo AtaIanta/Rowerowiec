@@ -95,7 +95,6 @@ module.exports = class MusicTriviaCommand extends Command {
             quality: 'highestaudio',
             highWaterMark: 1024 * 1024 * 1024
           })
-          console.log('{$song}')
         )
         .on('start', function() {
           message.guild.musicData.songDispatcher = dispatcher;
