@@ -25,7 +25,7 @@ module.exports = class MusicTriviaCommand extends Command {
           type: 'integer',
           min: 1,
           //default: 5,
-          max: 100
+          max: 20
         }
       ]
     });
@@ -126,7 +126,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react('704644463032795187');
+                msg.react('✅');
                 return collector.stop();
               }
               message.guild.triviaData.triviaScore.set(
@@ -134,7 +134,7 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   1
               );
-              msg.react('704644463032795187');
+              msg.react('✅');
             }
             // if user guessed singer
             else if (
@@ -149,7 +149,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react('704644463032795187');
+                msg.react('✅');
                 return collector.stop();
               }
 
@@ -158,7 +158,7 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   1
               );
-              msg.react('704644463032795187');
+              msg.react('✅');
             } else if (
               msg.content.toLowerCase() ===
                 queue[0].singer.toLowerCase() +
@@ -179,7 +179,7 @@ module.exports = class MusicTriviaCommand extends Command {
                     msg.author.username
                   ) + 1
                 );
-                msg.react('704644463032795187');
+                msg.react('✅');
                 return collector.stop();
               }
               message.guild.triviaData.triviaScore.set(
@@ -187,11 +187,11 @@ module.exports = class MusicTriviaCommand extends Command {
                 message.guild.triviaData.triviaScore.get(msg.author.username) +
                   2
               );
-              msg.react('704644463032795187');
+              msg.react('✅');
               return collector.stop();
             } else {
               // wrong answer
-              return msg.react('777954594596454408');
+              return msg.react('❎');
             }
           });
 
